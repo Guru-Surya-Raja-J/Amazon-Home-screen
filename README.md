@@ -52,12 +52,16 @@ Follow these steps to clone and run the project locally:
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Guru-Surya-Raja-J/Amazon-Home-screen.git
-
+```
+```bash
 # 2. Navigate to the project directory
 cd Amazon-Home-screen
-
+```
+```bash
 # 3. Install dependencies
 npm install
-
+```
+```bash
 # 4. Start the development server
 npm run dev
+```
