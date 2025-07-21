@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="navbar-logo">
           <a href="#" aria-label="Amazon Homepage">
             <img
-              src="https://cdn2.downdetector.com/static/uploads/logo/amazon.png"
+              src="https://irp.cdn-website.com/44f53704/dms3rep/multi/amazonaa.png"
               alt="Amazon"
               className="logo-image"
             />
@@ -65,8 +65,8 @@ const Navbar = () => {
             />
           </div>
           <div className="delivery-text">
-            <span className="deliver-to">Deliver to</span>
-            <span className="location">Chennai 600001</span>
+            <span className="deliver-to">Deliver to J.</span>
+            <span className="location">Thoothukudi 628002</span>
           </div>
         </div>
 
@@ -132,7 +132,7 @@ const Navbar = () => {
           aria-label="Account and Lists"
         >
           <div className="account-text">
-            <span className="hello-text">Hello, Sign in</span>
+            <span className="hello-text">Hello,Sign in</span>
             <span className="account-lists">Account & Lists</span>
           </div>
           <span className="dropdown-arrow">▼</span>
@@ -239,7 +239,7 @@ const Navbar = () => {
                   alt=""
                   className="menu-icon"
                 />
-                <span>Deliver to Chennai 600001</span>
+                <span>Deliver to J. Thoothukudi 628002</span>
               </div>
               <div className="mobile-menu-item">
                
@@ -270,6 +270,28 @@ const Navbar = () => {
           </div>
         </div>
       )}
+            {/* Secondary Navbar */}
+      <div className="navbar-secondary">
+        <div className="navbar-container">
+          <div className="secondary-menu">
+            <button className="all-menu">
+              ☰ All
+            </button>
+            <a href="#" className="menu-item">Fresh</a>
+            <a href="#" className="menu-item">Amazon miniTV</a>
+            <a href="#" className="menu-item">Sell</a>
+            <a href="#" className="menu-item">Best Sellers</a>
+            <a href="#" className="menu-item">Mobiles</a>
+            <a href="#" className="menu-item">Today's Deals</a>
+            <a href="#" className="menu-item">Customer Service</a>
+            <a href="#" className="menu-item">Electronics</a>
+            <a href="#" className="menu-item">Prime</a>
+            <a href="#" className="menu-item">Fashion</a>
+            <a href="#">Amazon Pay</a>
+            <a href="#" className="menu-item">Home & Kitchen</a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

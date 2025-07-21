@@ -1,6 +1,129 @@
+/* Secondary Navbar Styles */
+.navbar-secondary {
+  background-color: #232f3e;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Reset top/bottom margin and ensure full width container */
+.secondary-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  overflow-x: auto;
+  padding:4px; /* adjust vertical padding as needed */
+  white-space: nowrap;
+  scrollbar-width: none;
+  box-sizing: border-box;
+}
+.secondary-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Button and Menu Items */
+.all-menu {
+  background-color: #37475a;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 14px 5px 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 2px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.all-menu:hover,
+.all-menu:focus {
+  background-color: #485769;
+  outline: 1px solid #fff;
+}
+
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: background 0.18s, color 0.18s;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.2;
+}
+.menu-item:hover,
+.menu-item:focus {
+  background-color: #37475a;
+  color: #febd69;
+  outline: none;
+}
+
+.secondary-menu a:not(.menu-item) {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.2;
+  transition: background 0.18s, color 0.18s;
+}
+.secondary-menu a:not(.menu-item):hover,
+.secondary-menu a:not(.menu-item):focus {
+  background-color: #37475a;
+  color: #febd69;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .secondary-menu {
+    gap: 2px;
+    font-size: 13px;
+    padding: 6px 4px;
+  }
+  .all-menu {
+    padding: 4px 10px 4px 7px;
+    font-size: 13px;
+  }
+  .menu-item,
+  .secondary-menu a:not(.menu-item) {
+    padding: 4px 6px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-secondary {
+    font-size: 12px;
+  }
+  .secondary-menu {
+    gap: 1px;
+    padding: 4px 2px;
+  }
+  .all-menu {
+    padding: 3px 7px 3px 5px;
+    font-size: 12px;
+  }
+  .menu-item,
+  .secondary-menu a:not(.menu-item) {
+    padding: 3px 4px;
+    font-size: 12px;
+  }
+}
+
 
 .amazon-navbar {
-  background-color: #232f3e;
+  background-color:black;
   color: white;
   position: sticky;
   top: 0;
@@ -27,7 +150,7 @@
   display: block;
   padding: 4px 8px;
   border-radius: 2px;
-  transition: all 0.15s ease;
+  transition: all 0.15s ease;   
 }
 
 .navbar-logo a:hover {
@@ -37,7 +160,7 @@
 .logo-image {
   height: 30px;
   width: auto;
-  filter: brightness(0) invert(1);
+
   display: block;
 }
 
@@ -103,6 +226,7 @@
 .search-dropdown {
   position: relative;
   display: flex;
+  gap: 4px;
   align-items: center;
 }
 
@@ -115,10 +239,14 @@
   color: #333;
   cursor: pointer;
   appearance: none;
-  min-width: 50px;
   height: 40px;
-  padding-right: 24px;
+  padding-right: 0px;
   background-image: none;
+
+
+  width:auto;
+  max-width: 200px; 
+  white-space: nowrap;
 }
 
 .search-dropdown .dropdown-arrow {
