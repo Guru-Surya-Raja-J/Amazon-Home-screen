@@ -1,12 +1,67 @@
-# React + Vite
+# 🛒 Amazon Home Screen Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and visually engaging **Amazon Home Screen Clone** built with **React.js** (using Vite), custom CSS, and FontAwesome icons — no external UI frameworks like Bootstrap or Tailwind. This project recreates the familiar Amazon homepage layout, making it ideal for frontend portfolio showcases.
 
-Currently, two official plugins are available:
+## 🌍 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Visit Now:** [amazonhc.netlify.app](http://amazonhc.netlify.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Project Overview
+
+This clone mimics the **core layout and functionality** of Amazon’s home screen. It includes:
+
+- 🔹 A professional **navbar** with navigation links, sign-in button, and cart icon.
+- 🔹 A dynamic **hero image carousel**.
+- 🔹 A structured **product card section**.
+- 🔹 A responsive **grid layout** optimized for both desktop and mobile views.
+- 🔹 A clean and simple **footer** section.
+  
+Designed from scratch using **pure CSS** and **React components**, this project focuses on mastering layout precision and responsiveness.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology  | Description                    |
+|-------------|--------------------------------|
+| React       | Frontend library               |
+| Vite        | Fast React project bundler     |
+| HTML & CSS  | Layout and styling             |
+| FontAwesome | Icon support                   |
+| Netlify     | Deployment platform            |
+
+---
+## 📱 Responsive Design
+
+This project is fully responsive across all device sizes. 🖥️📱  
+Optimized using custom **media queries** to ensure a seamless shopping experience.
+
+| Desktop View | Mobile View |
+|--------------|-------------|
+| <img src="https://github.com/user-attachments/assets/e10ef2a7-4708-4739-989f-219ec61eaba7" width="100%" alt="Amazon Desktop Preview" /> | <img src="https://github.com/user-attachments/assets/3f2bd243-bf8f-4d43-9cd9-0c7491bd2bd2" width="250" alt="Amazon Mobile Preview" /> |
+
+
+---
+
+## 📂 Project Setup & Usage
+
+Follow these steps to clone and run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Guru-Surya-Raja-J/Amazon-Home-screen.git
+```
+```bash
+# 2. Navigate to the project directory
+cd Amazon-Home-screen
+```
+```bash
+# 3. Install dependencies
+npm install
+```
+```bash
+# 4. Start the development server
+npm run dev
+```
