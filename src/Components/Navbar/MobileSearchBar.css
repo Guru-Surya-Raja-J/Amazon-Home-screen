@@ -1,0 +1,49 @@
+.mobile-searchbar {
+  display: none;
+}
+
+@media (max-width: 414px) {
+  .mobile-searchbar {
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 32px);
+    height: 44px;
+    margin: 8px 16px 12px 16px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    position: relative;
+    padding: 0 16px;
+    z-index: 1099;
+  }
+  .mobile-searchbar-icon {
+    color: #888;
+    font-size: 20px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-searchbar-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: #232f3e;
+    padding: 0;
+    height: 100%;
+  }
+  .mobile-searchbar-mic {
+    background: none;
+    border: none;
+    color: #232f3e;
+    font-size: 20px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+} 

@@ -1,840 +1,491 @@
-/* Secondary Navbar Styles */
-.navbar-secondary {
-  background-color: #232f3e;
-  color: #fff;
-  font-size: 14px;
-  font-family: "Amazon Ember", Arial, sans-serif;
-  width: 100%;
-  height: auto;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* Reset top/bottom margin and ensure full width container */
-.secondary-menu {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 4px;
-  overflow-x: auto;
-  padding:4px; /* adjust vertical padding as needed */
-  white-space: nowrap;
-  scrollbar-width: none;
-  box-sizing: border-box;
-}
-.secondary-menu::-webkit-scrollbar {
-  display: none;
-}
-
-/* Button and Menu Items */
-.all-menu {
-  background-color: #37475a;
-  color: #fff;
-  border: none;
-  border-radius: 2px;
-  padding: 5px 14px 5px 10px;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  margin-right: 2px;
-  display: flex;
-  align-items: center;
-  transition: background 0.2s;
-}
-.all-menu:hover,
-.all-menu:focus {
-  background-color: #485769;
-  outline: 1px solid #fff;
-}
-
-.menu-item {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 8px;
-  border-radius: 2px;
-  font-size: 14px;
-  transition: background 0.18s, color 0.18s;
-  font-weight: 500;
-  display: inline-block;
-  line-height: 1.2;
-}
-.menu-item:hover,
-.menu-item:focus {
-  background-color: #37475a;
-  color: #febd69;
-  outline: none;
-}
-
-.secondary-menu a:not(.menu-item) {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 8px;
-  border-radius: 2px;
-  font-size: 14px;
-  font-weight: 500;
-  display: inline-block;
-  line-height: 1.2;
-  transition: background 0.18s, color 0.18s;
-}
-.secondary-menu a:not(.menu-item):hover,
-.secondary-menu a:not(.menu-item):focus {
-  background-color: #37475a;
-  color: #febd69;
-}
-
-/* Media Queries */
-@media (max-width: 900px) {
-  .secondary-menu {
-    gap: 2px;
-    font-size: 13px;
-    padding: 6px 4px;
-  }
-  .all-menu {
-    padding: 4px 10px 4px 7px;
-    font-size: 13px;
-  }
-  .menu-item,
-  .secondary-menu a:not(.menu-item) {
-    padding: 4px 6px;
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar-secondary {
-    font-size: 12px;
-  }
-  .secondary-menu {
-    gap: 1px;
-    padding: 4px 2px;
-  }
-  .all-menu {
-    padding: 3px 7px 3px 5px;
-    font-size: 12px;
-  }
-  .menu-item,
-  .secondary-menu a:not(.menu-item) {
-    padding: 3px 4px;
-    font-size: 12px;
-  }
-}
-
-
+/* --- General Styles --- */
 .amazon-navbar {
-  background-color:black;
+  background-color: #131A22;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   font-family: "Amazon Ember", Arial, sans-serif;
 }
-
 .navbar-container {
   display: flex;
   align-items: center;
-  padding: 8px 16px;
-  max-width: 1500px;
-  margin: 0 auto;
-  gap: 16px;
+  padding: 6px 10px;
+  gap: 5px;
   min-height: 60px;
 }
-
-.navbar-logo {
-  flex-shrink: 0;
+.nav-item-hover {
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
 }
-
-.navbar-logo a {
-  display: block;
-  padding: 4px 8px;
-  border-radius: 2px;
-  transition: all 0.15s ease;   
+.nav-item-hover:hover {
+  border-color: #ffffff;
 }
-
-.navbar-logo a:hover {
-  outline: 1px solid #ffffff;
-}
-
-.logo-image {
+.navbar-logo .logo-image {
   height: 30px;
-  width: auto;
-
-  display: block;
+  margin-top: 5px;
 }
-
-/* Delivery Location */
 .navbar-delivery {
   display: flex;
   align-items: center;
   gap: 6px;
-  cursor: pointer;
-  padding: 8px 9px;
-  border-radius: 2px;
-  transition: all 0.15s ease;
-  min-width: 120px;
-  border: 1px solid transparent;
 }
-
-.navbar-delivery:hover,
-.navbar-delivery:focus {
-  outline: 1px solid #ffffff;
-  outline-offset: 0;
-}
-
-.delivery-icon {
-  display: flex;
-  align-items: center;
-}
-
 .location-pin {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) invert(1);
+  font-size: 18px;
+  align-self: flex-start;
+  margin-top: 5px;
 }
-
 .delivery-text {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
-
 .deliver-to {
   color: #cccccc;
-  font-weight: 400;
   font-size: 12px;
 }
-
 .location {
-  color: white;
   font-weight: 700;
   font-size: 14px;
 }
-
-/* Search Bar */
 .navbar-search {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 8px;
-  position: relative;
+  min-width: 200px;
+  margin: 0 10px;
+  border-radius: 4px;
+  overflow: hidden;
 }
-
-.search-dropdown {
-  position: relative;
-  display: flex;
-  gap: 4px;
-  align-items: center;
+.navbar-search:focus-within {
+  box-shadow: 0 0 0 3px #ff9900;
 }
-
+.search-dropdown-container {
+  position: relative;
+  flex-shrink: 0;
+  background-color: #f3f3f3;
+}
 .category-select {
   background-color: #f3f3f3;
   border: none;
-  padding: 8px 8px 8px 12px;
-  border-radius: 4px 0 0 4px;
+  padding: 0 30px 0 12px;
+  height: 40px;
   font-size: 12px;
   color: #333;
   cursor: pointer;
+  border-right: 1px solid #cdcdcd;
   appearance: none;
-  height: 40px;
-  padding-right: 0px;
-  background-image: none;
-
-
-  width:auto;
-  max-width: 200px; 
-  white-space: nowrap;
 }
-
-.search-dropdown .dropdown-arrow {
-  position: absolute;
-  right: 6px;
-  top: 50%;
-  transform: translateY(-50%);
+.search-dropdown-container::after {
+  content: '▼';
   font-size: 8px;
   color: #666;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
 }
-
-.category-select:focus {
-  outline: 2px solid #ff9900;
-  outline-offset: -2px;
-}
-
 .search-input {
-  flex: 1;
-  padding: 8px 12px;
+  width: 100%;
+  padding: 10px;
   border: none;
-  font-size: 16px;
+  font-size: 15px;
   height: 40px;
   box-sizing: border-box;
-  border-left: 1px solid #cdcdcd;
 }
-
 .search-input:focus {
-  outline: 2px solid #ff9900;
-  outline-offset: -2px;
+  outline: none;
 }
-
-.search-input::placeholder {
-  color: #999;
-  font-size: 14px;
-}
-
 .search-button {
   background-color: #febd69;
   border: none;
-  padding: 8px 12px;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  color: #333;
+  width: 45px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.15s ease;
-  min-width: 45px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
-
-.search-button:hover {
-  background-color: #f3a847;
-}
-
-.search-button:focus {
-  outline: 2px solid #008296;
-  outline-offset: -2px;
-}
-
-/* Language Selector */
 .navbar-language {
   display: flex;
   align-items: center;
   gap: 4px;
-  cursor: pointer;
-  padding: 8px 9px;
-  border-radius: 2px;
-  transition: all 0.15s ease;
-  font-size: 14px;
   font-weight: 700;
-  border: 1px solid transparent;
 }
-
-.navbar-language:hover,
-.navbar-language:focus {
-  outline: 1px solid #ffffff;
-  outline-offset: 0;
-}
-
 .flag-icon {
-  width: 25px;
-  height: auto;
-  border-radius: 1px;
-  margin-top:2px;
+  width: 22px;
 }
-
-.language-text {
-  font-size: 14px;
-  font-weight: 700;
-}
-
 .dropdown-arrow {
   font-size: 10px;
   color: #cccccc;
   margin-left: 2px;
 }
-
-/* Account & Lists */
-.navbar-account {
+.navbar-account, .navbar-orders {
   display: flex;
   align-items: center;
-  gap: 4px;
-  cursor: pointer;
-  padding: 8px 9px;
-  border-radius: 2px;
-  transition: all 0.15s ease;
-  min-width: 100px;
-  border: 1px solid transparent;
 }
-
-.navbar-account:hover,
-.navbar-account:focus {
-  outline: 1px solid #ffffff;
-  outline-offset: 0;
-}
-
-.account-text {
+.account-text, .orders-text {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
-
-.hello-text {
-  color: white;
-  font-weight: 400;
+.hello-text, .returns-text {
   font-size: 12px;
 }
-
-.account-lists {
-  color: white;
-  font-weight: 700;
+.account-lists, .orders-main {
   font-size: 14px;
+  font-weight: 700;
 }
 
-.navbar-orders {
-  display: flex;
-  align-items: center;
+/* --- ICONS HIDDEN BY DEFAULT --- */
+.mobile-menu-toggle, .account-icon-mobile {
+  display: none;
+}
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
   cursor: pointer;
-  padding: 8px 9px;
-  border-radius: 2px;
-  transition: all 0.15s ease;
-  min-width: 80px;
-  border: 1px solid transparent;
+  padding: 8px;
+  margin-bottom:15px;
 }
 
-.navbar-orders:hover,
-.navbar-orders:focus {
-  outline: 1px solid #ffffff;
-  outline-offset: 0;
-}
-
-.orders-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-  line-height: 1.1;
-}
-
-.returns-text {
-  color: white;
-  font-weight: 400;
-  font-size: 12px;
-}
-
-.orders-main {
-  color: white;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-/* Cart */
+/* --- UPDATED & CONSISTENT CART STYLES --- */
 .navbar-cart {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  padding: 8px 9px;
-  border-radius: 2px;
-  transition: all 0.15s ease;
-  position: relative;
-  border: 1px solid transparent;
+  align-items: flex-end;
+  gap: 2px;
 }
-
-.navbar-cart:hover,
-.navbar-cart:focus {
-  outline: 1px solid #ffffff;
-  outline-offset: 0;
-}
-
-.cart-icon {
+.cart-icon-container {
   position: relative;
   display: flex;
   align-items: center;
 }
-
+.cart-icon {
+  width: 38px;
+  height: 28px;
+    margin-bottom:8px;
+}
+.cart-icon path {
+  fill: #FFFFFF;
+}
 .cart-count {
   position: absolute;
-  top: -8px;
-  right: -6px;
-  background-color: #ff9900;
-  color: #333;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  top: -4px; /* Adjust for better vertical placement on the cart icon */
+  left: 23px; /* Position relative to the cart icon's container */
+  
+  /* Creates the perfect orange circle */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* This is key for a circle shape */
+  background-color: #f08804; /* A vibrant Amazon orange */
+  
+  /* Styles the white text */
+  color: #ffffff; 
+  font-size: 12px;
+  font-weight: 700; /* Bold and clear */
+  
+  /* Perfectly centers the number inside the circle */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1;
+  line-height: 1; /* Prevents extra vertical space */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Adds a subtle depth */
 }
-
 .cart-text {
   font-size: 14px;
   font-weight: 700;
+  line-height: 1;
+  padding-bottom: 2px;
 }
 
+/* --- RESPONSIVE STYLES --- */
 
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 3px;
-  padding: 8px;
-  background: none;
-  border: none;
-  border-radius: 2px;
-  transition: all 0.15s ease;
+@media (max-width: 1150px) {
+  .navbar-delivery,
+  .navbar-language,
+  .navbar-orders {
+    display: none;
+  }
 }
 
-.mobile-menu-toggle:hover {
-  outline: 1px solid #ffffff;
+@media (max-width: 900px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    padding: 8px 10px;
+    row-gap: 10px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    order: 1;
+  }
+
+  .navbar-logo {
+    order: 2;
+    flex-grow: 1;
+    margin: 0;
+  }
+  .navbar-logo .logo-image {
+    height: 28px;
+  }
+
+  .navbar-account {
+    order: 3;
+  }
+  .navbar-account .account-text,
+  .navbar-account .dropdown-arrow {
+    display: none;
+  }
+  .account-icon-mobile {
+    display: block;
+    font-size: 24px;
+      margin-bottom:12px;
+  }
+
+  /* Cart Mobile Adjustments */
+  .navbar-cart {
+    order: 4;
+    align-items: center;
+  }
+  .navbar-cart .cart-text {
+    display: none;
+  }
+  .cart-count {
+    top: -4px;
+  }
+
+  /* Search Mobile Adjustments */
+  .navbar-search {
+    order: 5;
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .navbar-search .search-dropdown-container {
+    display: none;
+  }
+  .navbar-search .search-input {
+    border-radius: 4px 0 0 4px;
+  }
 }
 
-.mobile-menu-toggle span {
-  width: 22px;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-.mobile-menu-toggle span.active:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.mobile-menu-toggle span.active:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-toggle span.active:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Mobile Menu Overlay */
+/* --- Mobile Menu Flyout --- */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1001;
-  display: flex;
-  animation: fadeIn 0.3s ease;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .mobile-menu {
   background-color: #232f3e;
   width: 85%;
   max-width: 350px;
   height: 100%;
   overflow-y: auto;
-  animation: slideIn 0.3s ease;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
 }
-
 @keyframes slideIn {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
 }
-
 .mobile-menu-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #485769;
-  background-color: #37475a;
-}
-
-.mobile-menu-header h2 {
-  color: white;
+  gap: 15px;
+  padding: 15px 20px;
+  background-color: #131A22;
   font-size: 18px;
   font-weight: 700;
-  margin: 0;
+}
+@media (max-width: 768px) {
+
+  .name{
+    display:block;
+    color:white;
+  }
+  
 }
 
-.close-menu {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 2px;
-  transition: background-color 0.15s ease;
+
+
+
+
+
+
+
+/* --- UNIQUE CSS FOR DARK SIDE MENU --- */
+
+/* This is the main container for the scrollable menu content */
+.mobile-menu-content {
+  overflow-y: auto; /* Allows scrolling if content is long */
+  flex-grow: 1;
+  background-color: #232f3e; /* The main dark background color */
+  color: #eaeded; /* A slightly off-white for better readability */
 }
 
-.close-menu:hover {
-  background-color: #485769;
-}
-
-.mobile-menu-section {
-  padding: 0;
-}
-
-.mobile-menu-item {
-  padding: 16px;
-  border-bottom: 1px solid #485769;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
+/* Styles for each individual link/item in the menu */
+.mobile-menu-content .menu-item {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  font-size: 14px;
-}
-
-.mobile-menu-item:hover {
-  background-color: #37475a;
-}
-
-.mobile-menu-item.cart-item {
   justify-content: space-between;
-}
-
-.menu-icon {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) invert(1);
-}
-
-.mobile-cart-count {
-  background-color: #ff9900;
-  color: #333;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 12px;
+  padding: 16px 25px; /* Consistent padding */
+  font-size: 14px;
+  color: #eaeded;
+  text-decoration: none;
+  border-bottom: 1px solid #3a4553; /* Subtle separator line */
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Special style for the main "Amazon Home" link */
+.mobile-menu-content .menu-item.main-link {
   font-weight: 700;
-}
-
-/* Mobile Search */
-.mobile-search {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 0;
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
-.mobile-category-select {
-  background-color: #f3f3f3;
-  border: none;
-  padding: 12px 8px;
-  margin-right:auto;
-  font-size: 12px;
-  color: #333;
-  cursor: pointer;
-  min-width: 60px;
-}
-
-.mobile-search-input {
-  flex: 1;
-  padding: 12px;
-  border: none;
   font-size: 16px;
-  border-left: 1px solid #cdcdcd;
 }
 
-.mobile-search-input:focus {
-  outline: 2px solid #ff9900;
-  outline-offset: -2px;
+/* Hover effect for all menu items */
+.mobile-menu-content .menu-item:hover {
+  background-color: #37475a; /* Lighter shade on hover */
 }
 
-.mobile-search-button {
-  background-color: #febd69;
-  border: none;
-  padding: 12px 16px;
-  cursor: pointer;
-  color: #333;
+/* Container for each category section (e.g., "Trending") */
+.mobile-menu-content .menu-section {
+  /* The bottom border is on the items themselves, so we just need a top border */
+  border-top: 1px solid #3a4553;
+}
+
+/* Title for each section (e.g., "Top Categories for You") */
+.mobile-menu-content .menu-section-title {
+  padding: 16px 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff; /* Brighter white for titles */
+  background-color: #232f3e;
+}
+
+/* Remove the bottom border from the last item in a section */
+.mobile-menu-content .menu-section .menu-item:last-child {
+  border-bottom: none;
+}
+
+/* Style for the "See All" link */
+.mobile-menu-content .see-all {
+  color: #a3b3c3; /* A different color to show it's a secondary action */
+}
+
+/* Style for the ">" chevron on the "Amazon Home" link */
+.mobile-menu-content .chevron {
+  font-size: 16px;
+  color: #8897a9;
+}
+
+/* Creates the "v" chevron for the "See All" link */
+.mobile-menu-content .chevron-down::after {
+  content: ' ';
+  display: inline-block;
+  border: solid #8897a9;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.mobile-menu-content .see-all:hover .chevron-down::after {
+  transform: rotate(45deg) scale(1.1); /* Slight grow effect on hover */
+}
+
+
+
+
+
+
+/* --- UNIQUE CSS FOR DARK SIDE MENU --- */
+
+/* --- STYLES FOR THE SIDE MENU CLOSE BUTTON --- */
+
+/* --- STYLES FOR THE MENU CONTENT --- */
+/* This is the main container for the scrollable menu content */
+.mobile-menu-content {
+  overflow-y: auto; /* Allows scrolling if content is long */
+  flex-grow: 1;
+  background-color: #232f3e; /* The main dark background color */
+  color: #eaeded; /* A slightly off-white for better readability */
+}
+
+/* Styles for each individual link/item in the menu */
+.mobile-menu-content .menu-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  transition: background-color 0.15s ease;
+  padding: 16px 25px; /* Consistent padding */
+  font-size: 14px;
+  color: #eaeded;
+  text-decoration: none;
+  border-bottom: 1px solid #3a4553; /* Subtle separator line */
+  transition: background-color 0.2s ease-in-out;
 }
 
-.mobile-search-button:hover {
-  background-color: #f3a847;
+/* Special style for the main "Amazon Home" link */
+.mobile-menu-content .menu-item.main-link {
+  font-weight: 700;
+  font-size: 16px;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .navbar-delivery,
-  .navbar-language {
-    display: none;
-  }
-  
-  .navbar-search {
-    margin: 0 8px;
-    max-width: 500px;
-  }
-  
-  .navbar-account {
-    min-width: 80px;
-  }
+/* Hover effect for all menu items */
+.mobile-menu-content .menu-item:hover {
+  background-color: #37475a; /* Lighter shade on hover */
 }
 
-@media (max-width: 900px) {
-  .navbar-orders {
-    display: none;
-  }
-  
-  .navbar-search {
-    max-width: 400px;
-  }
+/* Container for each category section (e.g., "Trending") */
+.mobile-menu-content .menu-section {
+  /* The bottom border is on the items themselves, so we just need a top border */
+  border-top: 1px solid #3a4553;
 }
 
-@media (max-width: 768px) {
-  .navbar-container {
-    gap: 8px;
-    padding: 8px 12px;
-  }
-    .navbar-logo {
-    text-align: center;
-  }
-  .navbar-search,
-  .navbar-account {
-    display: none;
-  }
-  
-  .mobile-menu-toggle {
-    display: flex;
-    margin-left: auto;
-  }
-  
-  .navbar-cart {
-    order: -1;
-    margin-left: auto;
-    margin-right: 8px;
-  }
-  
-  .logo-image {
-    height: 28px;
-    text-align: center;
-  }
+/* Title for each section (e.g., "Top Categories for You") */
+.mobile-menu-content .menu-section-title {
+  padding: 16px 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff; /* Brighter white for titles */
+  background-color: #232f3e;
 }
 
-@media (max-width: 480px) {
-  .navbar-container {
-    padding: 6px 10px;
-    min-height: 56px;
-  }
-   
-  .logo-image {
-    height: 26px;
-  }
-  
-  .cart-text {
-    display: none;
-  }
-  
-  .mobile-menu {
-    width: 90%;
-  }
-  
-  .mobile-menu-item {
-    padding: 14px 16px;
-    font-size: 13px;
-  }
+/* Remove the bottom border from the last item in a section */
+.mobile-menu-content .menu-section .menu-item:last-child {
+  border-bottom: none;
 }
 
-/* Focus States for Accessibility */
-.navbar-delivery:focus,
-.navbar-language:focus,
-.navbar-account:focus,
-.navbar-orders:focus,
-.navbar-cart:focus {
-  outline: 2px solid #ff9900;
-  outline-offset: 2px;
+/* Style for the "See All" link */
+.mobile-menu-content .see-all {
+  color: #a3b3c3; /* A different color to show it's a secondary action */
 }
 
-/* High Contrast Mode Support */
-@media (prefers-contrast: high) {
-  .amazon-navbar {
-    border-bottom: 2px solid white;
-  }
-  
-  .navbar-delivery:hover,
-  .navbar-language:hover,
-  .navbar-account:hover,
-  .navbar-orders:hover,
-  .navbar-cart:hover {
-    outline: 2px solid white;
-  }
+/* Style for the ">" chevron on the "Amazon Home" link */
+.mobile-menu-content .chevron {
+  font-size: 16px;
+  color: #8897a9;
 }
 
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .mobile-menu-toggle span,
-  .mobile-menu-overlay,
-  .mobile-menu,
-  .navbar-delivery,
-  .navbar-language,
-  .navbar-account,
-  .navbar-orders,
-  .navbar-cart,
-  .search-button {
-    transition: none;
-  }
-  
-  .mobile-menu-overlay,
-  .mobile-menu {
-    animation: none;
-  }
+/* Creates the "v" chevron for the "See All" link */
+.mobile-menu-content .chevron-down::after {
+  content: ' ';
+  display: inline-block;
+  border: solid #8897a9;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .navbar-cart {
-    display: none; 
-  }
-  .navbar-logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .navbar-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .mobile-menu {
-    width: 100;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* optional dark background overlay */
-  z-index: 999;
-  display: flex;
-}
-
-.mobile-menu {
-  width: 80%; /* or 100% if you want full width */
-  background-color: #131921; /* Amazon blue */
-  height: 100vh; /* 👈 This makes it full screen height */
-  padding: 16px;
-  overflow-y: auto;
-  color: white;
+.mobile-menu-content .see-all:hover .chevron-down::after {
+  transform: rotate(45deg) scale(1.1); /* Slight grow effect on hover */
 }

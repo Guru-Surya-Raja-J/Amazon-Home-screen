@@ -1,0 +1,117 @@
+.mobile-drawer-overlay {
+  display: none;
+}
+@media (max-width: 414px) {
+  .mobile-drawer-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+    z-index: 1200;
+    animation: fadeIn 0.2s;
+  }
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    background: #232f3e;
+    color: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+    z-index: 1201;
+    display: flex;
+    flex-direction: column;
+    animation: slideInLeft 0.22s cubic-bezier(.4,0,.2,1);
+    overflow-y: auto;
+  }
+  .mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 18px 12px 18px;
+    background: #232f3e;
+    border-bottom: 1px solid #2c3e50;
+    position: relative;
+  }
+  .drawer-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .drawer-account {
+    font-size: 13px;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .drawer-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .drawer-section {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border-bottom: 1px solid #2c3e50;
+  }
+  .drawer-section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e3e6e6;
+    padding: 16px 18px 6px 18px;
+    letter-spacing: 0.01em;
+  }
+  .drawer-item {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background 0.13s;
+    border-radius: 0;
+    border: none;
+    background: none;
+    text-align: left;
+  }
+  .drawer-item:hover, .drawer-item.active {
+    background: #37475a;
+    color: #ff9900;
+  }
+  .drawer-item.home {
+    font-weight: 700;
+    color: #ff9900;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #232f3e;
+  }
+  .drawer-item-icon {
+    font-size: 17px;
+    margin-right: 6px;
+  }
+  .home-section {
+    border-bottom: 1px solid #2c3e50;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+} 

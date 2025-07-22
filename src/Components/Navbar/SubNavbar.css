@@ -1,0 +1,65 @@
+/* --- SUB NAVBAR STYLES (MOBILE ONLY REPLICA) --- */
+
+/* By default, the container is hidden on desktop */
+.sub-navbar-container {
+  display: none;
+  /* This is the key gradient to match the Amazon look */
+  padding: 12px 0 8px 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* This is the scrollable area */
+.sub-navbar-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-left: 10px;
+  /* Hide the scrollbar for a cleaner look */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+.sub-navbar-scroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Styles for each individual item in the carousel */
+.sub-navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #0F1111;
+  padding-right: 20px; /* Spacing between items */
+  flex-shrink: 0; /* Prevents items from shrinking */
+}
+
+.sub-navbar-image-container {
+  width: 60px; /* Fixed width for the image container */
+  height: 60px;
+  display: flex;
+  margin-right:30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-navbar-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Ensures image fits without stretching */
+}
+
+/* The text label below the icon */
+.sub-navbar-label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-right:30px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* --- MEDIA QUERY TO SHOW THE COMPONENT ON MOBILE --- */
+@media (max-width: 900px) {
+  .sub-navbar-container {
+    display: block; /* Show the component */
+  }
+}
