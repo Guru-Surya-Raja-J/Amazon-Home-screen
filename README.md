@@ -40,7 +40,8 @@ Optimized using custom **media queries** to ensure a seamless shopping experienc
 
 | Desktop View | Mobile View |
 |--------------|-------------|
-| <img src="https://github.com/user-attachments/assets/e10ef2a7-4708-4739-989f-219ec61eaba7" width="100%" alt="Amazon Desktop Preview" /> | <img src="https://github.com/user-attachments/assets/3f2bd243-bf8f-4d43-9cd9-0c7491bd2bd2" width="250" alt="Amazon Mobile Preview" /> |
+| <img src="https://github.com/user-attachments/assets/e10ef2a7-4708-4739-989f-219ec61eaba7" width="100%" alt="Amazon Desktop Preview" /> | <img width="233" height="527" alt="image" src="https://github.com/user-attachments/assets/40794926-dc3c-4dc2-b050-e52eea767811" />
+|
 
 
 ---
