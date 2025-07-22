@@ -4,7 +4,8 @@ A fully responsive and visually engaging **Amazon Home Screen Clone** built with
 
 ## 🌍 Live Demo
 
-🔗 **Visit Now:** [amazonhc.netlify.app](http://amazonhc.netlify.app){:target="_blank"}
+🔗 <a href="http://amazonhc.netlify.app" target="_blank"><strong>Visit Now: http://amazonhc.netlify.app</strong></a>
+
 
 
 ---
